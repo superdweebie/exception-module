@@ -1,0 +1,33 @@
+{
+    "name": "superdweebie/exception-module",
+    "description": "Zend Framework 2 Module that provides exception handling functionality",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "doctrine",
+        "zf2"
+    ],
+    "homepage": "http://github.com/superdweebie/exceptionModule",
+    "authors": [
+        {
+            "name": "Tim Roediger",
+            "email": "superdweebie@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "doctrine/doctrine-mongo-odm-module" : "dev-master",
+		"superdweebie/common"            : "dev-master",
+		"superdweebie/json-controller"   : "dev-master",
+        "superdweebie/module-unit-tester": "dev-master",
+        "zendframework/zendframework"    : "dev-master"
+    },
+    "suggest": {
+        "superdweebie/sijit": "A dojo extensions that include a javascript client for this exception module"
+    },
+    "autoload": {
+        "psr-0": {
+            "Sds\\ExceptionModule": "src/"
+        }
+    }
+}

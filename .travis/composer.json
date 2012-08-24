@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php": ">=5.4",
+        "superdweebie/exception-module"  : "dev-master"
+    }
+}
