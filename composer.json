@@ -15,12 +15,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "doctrine/doctrine-mongo-odm-module" : "dev-master",
-		"superdweebie/common"            : "dev-master",
-		"superdweebie/json-controller"   : "dev-master",
-        "superdweebie/module-unit-tester": "dev-master",
-        "zendframework/zendframework"    : "dev-master"
+        "php": ">=5.4"
     },
     "suggest": {
         "superdweebie/sijit": "A dojo extensions that include a javascript client for this exception module"
