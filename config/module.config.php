@@ -1,39 +1,22 @@
 <?php
-return array(
-    'sds' => array(
-        'exception' => array(
+return [
+    'sds' => [
+        'exception' => [
+            'enableJsonExceptionStrategy' => true,
+            'describePath' => '/exception',
+            'exceptionMap' => []
+        ],
+    ],
 
-            //Used to serialize objects
-            'serializer' => 'sds.doctrineExtensions.serializer',
+    'service_manager' => [
+        'factories' => [
+            'Sds\ExceptionModule\JsonExceptionStrategy' => 'Sds\ExceptionModule\Service\JsonExceptionStrategyFactory',
+        ],
+    ],
 
-        ),
-    ),
-
-    'router' => array(
-        'routes' => array(
-            'sds.exception' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => array(
-                    'route'    => '/exception/log',
-                    'defaults' => array(
-                        'controller' => 'sds.exception.log',
-                        'action' => 'log'
-                    ),
-                ),
-            ),
-        ),
-    ),
-
-    'controllers' => array(
-        'factories' => array(
-            'sds.exception.log' => 'Sds\ExceptionModule\Service\ExceptionLogControllerFactory'
-        ),
-    ),
-
-    'view_manager' => array(
-        'strategies' => array(
+    'view_manager' => [
+        'strategies' => [
             'ViewJsonStrategy',
-        ),
-    ),
-
-);
+        ],
+    ],
+];
