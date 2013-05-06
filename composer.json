@@ -17,10 +17,14 @@
     "require": {
         "php": ">=5.4",
         "doctrine/doctrine-mongo-odm-module" : "dev-master",
-		"superdweebie/common"            : "dev-master",
-		"superdweebie/json-controller"   : "dev-master",
-        "superdweebie/module-unit-tester": "dev-master",
-        "zendframework/zendframework"    : "dev-master"
+		"superdweebie/common"                : "~0.3",
+        "zendframework/zend-http"            : "~2.1.5",
+        "zendframework/zend-mvc"             : "~2.1.5",
+        "zendframework/zend-service-manager" : "~2.1.5",
+        "zendframework/zend-view"            : "~2.1.5"
+    },
+    "require-dev": {
+        "zendframework/zend-test"    : "~2.1.5"
     },
     "suggest": {
         "superdweebie/sijit": "A dojo package that include a javascript client for this exception module"
