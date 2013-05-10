@@ -20,7 +20,7 @@
 		"superdweebie/common"                : "~0.3",
         "zendframework/zend-http"            : "~2.1.5",
         "zendframework/zend-mvc"             : "~2.1.5",
-        "zendframework/zend-service-manager" : "~2.1.5",
+        "zendframework/zend-servicemanager" : "~2.1.5",
         "zendframework/zend-view"            : "~2.1.5"
     },
     "require-dev": {
