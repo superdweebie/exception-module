@@ -14,7 +14,7 @@ use Sds\DoctrineExtensions\Annotation\Annotations as Sds;
  * @Sds\Rest
  * @Sds\Rest\Cache(noCache=true, public=false)
  * @Sds\Permission\Basic(roles="all", allow="create")
- * @Sds\Permission\Basic(roles="admin", allow={"read", "delete})
+ * @Sds\Permission\Basic(roles="admin", allow={"read", "delete"})
  * @Sds\Dojo\JsonRest
  */
 class Exception {

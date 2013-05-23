@@ -1,37 +1,63 @@
 {
-    "name": "superdweebie/exception-module",
+    "name"       : "superdweebie/exception-module",
+    "version"    : "0.3",
     "description": "Zend Framework 2 Module that provides exception handling functionality",
-    "type": "library",
-    "license": "MIT",
+    "type"       : "library",
+    "license"    : "MIT",
     "keywords": [
         "doctrine",
+        "exception",
+        "json",
         "zf2"
     ],
-    "homepage": "http://github.com/superdweebie/exceptionModule",
-    "authors": [
+    "homepage"   : "http://github.com/superdweebie/exceptionModule",
+    "authors"    : [
         {
-            "name": "Tim Roediger",
-            "email": "superdweebie@gmail.com"
+            "name"  : "Tim Roediger",
+            "email" : "superdweebie@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "http://github.com/superdweebie/zf2"
+        },
+        {
+            "type": "vcs",
+            "url": "http://github.com/superdweebie/DoctrineModule"
+        },
+        {
+            "type": "vcs",
+            "url": "http://github.com/superdweebie/DoctrineMongoODMModule"
         }
     ],
     "require": {
         "php": ">=5.4",
-        "doctrine/doctrine-mongo-odm-module" : "dev-master",
-		"superdweebie/common"                : "~0.3",
-        "zendframework/zend-http"            : "~2.1.5",
-        "zendframework/zend-mvc"             : "~2.1.5",
-        "zendframework/zend-servicemanager" : "~2.1.5",
-        "zendframework/zend-view"            : "~2.1.5"
+        "superdweebie/doctrine-extensions-module" : "~0.3",
+		"superdweebie/common"                     : "~0.3",
+        "zendframework/zend-http"                 : "~2.2",
+        "zendframework/zend-mvc"                  : "~2.2",
+        "zendframework/zend-servicemanager"       : "~2.2",
+        "zendframework/zend-view"                 : "~2.2"
     },
     "require-dev": {
-        "zendframework/zend-test"    : "~2.1.5"
+        "zendframework/zendframework"             : "dev-resolve-3823 as 2.2",
+        "superdweebie/common"                     : "dev-develop as 0.3",
+        "superdweebie/doctrine-extensions"        : "dev-develop as 0.3",
+        "superdweebie/doctrine-extensions-module" : "dev-develop as 0.3",
+        "doctrine/doctrine-mongo-odm-module"      : "dev-dev-1.0 as 1.0",
+        "doctrine/doctrine-module"                : "dev-develop as 1.0"
     },
     "suggest": {
-        "superdweebie/sijit": "A dojo package that include a javascript client for this exception module"
+        "superdweebie/sijit": "A dojo package that includes a javascript client for this exception module"
     },
     "autoload": {
         "psr-0": {
             "Sds\\ExceptionModule": "src/"
         }
+    },
+    "config": {
+        "github-protocols": ["http", "https", "git"]
     }
 }

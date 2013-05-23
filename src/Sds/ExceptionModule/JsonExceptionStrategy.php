@@ -114,20 +114,20 @@ class JsonExceptionStrategy
         if (isset($this->exceptionMap[get_class($exception)])){
             $mapping = $this->exceptionMap[get_class($exception)];
             $data = [
-                'describedBy' => $this->describePath . '/' . $mapping['describedBy'],
+                'describedBy' => $this->describePath . '/' . $mapping['described_by'],
                 'title' => $mapping['title']
             ];
-            if (isset($mapping['statusCode'])){
-                $data['statusCode'] = $mapping['statusCode'];
+            if (isset($mapping['status_code'])){
+                $data['statusCode'] = $mapping['status_code'];
             }
-            if (isset($mapping['extensionFields'])){
-                foreach ($mapping['extensionFields'] as $field){
+            if (isset($mapping['extension_fields'])){
+                foreach ($mapping['extension_fields'] as $field){
                     $data[$field] = $exception->{'get' . ucfirst($field)}();
                 }
             }
             if ($this->displayExceptions){
-                if (isset($mapping['restrictedExtensionFields'])){
-                    foreach ($mapping['restrictedExtensionFields'] as $field){
+                if (isset($mapping['restricted_extension_fields'])){
+                    foreach ($mapping['restricted_extension_fields'] as $field){
                         $data[$field] = $exception->{'get' . ucfirst($field)}();
                     }
                 }

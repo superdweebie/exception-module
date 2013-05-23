@@ -36,12 +36,12 @@ class JsonExceptionStrategyFactory implements FactoryInterface
         }
         $exceptionStrategy->setDisplayExceptions($displayExceptions);
 
-        if (isset($config['sds']['exception']['describePath'])){
-            $exceptionStrategy->setDescribePath($config['sds']['exception']['describePath']);
+        if (isset($config['sds']['exception']['describe_path'])){
+            $exceptionStrategy->setDescribePath($config['sds']['exception']['describe_path']);
         }
 
-        if (isset($config['sds']['exception']['exceptionMap'])){
-            $exceptionStrategy->setExceptionMap($config['sds']['exception']['exceptionMap']);
+        if (isset($config['sds']['exception']['exception_map'])){
+            $exceptionStrategy->setExceptionMap($config['sds']['exception']['exception_map']);
         }
 
         return $exceptionStrategy;

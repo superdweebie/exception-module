@@ -16,6 +16,16 @@ use Zend\Mvc\Controller\AbstractActionController;
 class ExceptionDescriptionController extends AbstractActionController
 {
 
+    protected $exceptionMap;
+
+    public function getExceptionMap() {
+        return $this->exceptionMap;
+    }
+
+    public function setExceptionMap($exceptionMap) {
+        $this->exceptionMap = $exceptionMap;
+    }
+
     public function indexAction(){
 
     }
