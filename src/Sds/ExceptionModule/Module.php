@@ -38,7 +38,7 @@ class Module
             MvcEvent::EVENT_DISPATCH_ERROR,
             function($closureEvent) use ($serviceManager){
                 $config = $serviceManager->get('Config');
-                if ( ! $config['sds']['exception']['enableJsonExceptionStrategy']){
+                if ( ! $config['sds']['exception']['enable_json_exception_strategy']){
                     return;
                 }
                 $serviceManager->get('Sds\ExceptionModule\JsonExceptionStrategy')->prepareExceptionViewModel($closureEvent);
