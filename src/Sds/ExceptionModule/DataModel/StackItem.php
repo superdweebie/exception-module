@@ -8,8 +8,10 @@ use Sds\DoctrineExtensions\Annotation\Annotations as Sds;
 
 /**
  * @ODM\EmbeddedDocument
- * @Sds\Permission\Basic(roles="all", allow="create")
- * @Sds\Permission\Basic(roles="admin", allow={"read", "delete"})
+ * @Sds\AccessControl({
+ *     @Sds\Permission\Basic(roles="*", allow="create"),
+ *     @Sds\Permission\Basic(roles="admin", allow={"read", "delete"})
+ * })
  */
 class StackItem {
 
