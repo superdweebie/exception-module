@@ -1,3 +1,5 @@
+DEPRECIATED see <a href="http://github.com/zoopcommerce/maggott-module">maggott-module</a>
+
 Sds exceptionModule
 ===================
 
